@@ -9,6 +9,8 @@ import {SeedApp} from './app/seed-app';
 
 // enableProdMode()
 
+require('bootstrap-loader');
+
 bootstrap(SeedApp, [
   HTTP_PROVIDERS,
   ROUTER_PROVIDERS,
