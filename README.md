@@ -4,6 +4,9 @@ A simple starter project demonstrating the basic concepts of Angular 2.
 
 This branch uses [Webpack](https://webpack.github.io/) for Development. There is also a SystemJS branch available.
 
+### My own changes from the angular teams seed
+- Changed the css to use a scss loader
+
 ### Usage
 - Clone or fork this repository
 - Make sure you have [node.js](https://nodejs.org/) installed

@@ -8,7 +8,7 @@ import {Github} from '../../services/github';
 @Component({
   selector: 'repo-browser',
   templateUrl: 'app/components/repo-browser/repo-browser.html',
-  styleUrls: ['app/components/repo-browser/repo-browser.css'],
+  styles: [require('./repo-browser.scss')],
   providers: [ Github ],
   directives: [ ROUTER_DIRECTIVES ],
   pipes: []

@@ -18,11 +18,17 @@ var webpackConfig = {
     new webpack.optimize.CommonsChunkPlugin({ name: ['app', 'vendor', 'polyfills'], minChunks: Infinity })
   ],
 
+  postcss: [
+    require('postcss-cssnext')({
+      browsers: ['> 5% in NO']
+    })
+  ],
+
   module: {
     loaders: [
       // .ts files for TypeScript
-      { test: /\.ts$/, loader: 'awesome-typescript-loader' }
-
+      { test: /\.ts$/, loader: 'awesome-typescript-loader' },
+      { test: /\.scss$/, loader: 'to-string!css-loader!postcss-loader!sass-loader', exclude: /node_modules/}
     ]
   }
 
@@ -76,7 +82,7 @@ var defaultConfig = {
 
   resolve: {
     root: [ path.join(__dirname, 'src') ],
-    extensions: ['', '.ts', '.js'],
+    extensions: ['', '.ts', '.js', '.scss'],
     alias: {
       'angular2/testing': path.join(__dirname, 'node_modules', '@angular', 'core', 'testing.js'),
       '@angular/testing': path.join(__dirname, 'node_modules', '@angular', 'core', 'testing.js'),

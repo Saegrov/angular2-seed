@@ -5,7 +5,7 @@ import {Http} from '@angular/http';
 @Component({
   selector: 'about',
   templateUrl: 'app/components/about/about.html',
-  styleUrls: ['app/components/about/about.css'],
+  styles: [require('./about.scss')],
   providers: [],
   directives: [],
   pipes: []
