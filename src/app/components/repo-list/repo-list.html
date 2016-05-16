@@ -1,8 +1,14 @@
-<h3>Repo list</h3>
-<ul>
-	<li *ngFor="let repo of repos | async">
-    <a [routerLink]=" ['RepoDetail', {org: repo.owner.login, name: repo.name}] ">
-      {{ repo.name }}
-    </a>
-  </li>
-</ul>
+<div class="row">
+  <div class="col-xs-12">
+    <h3 class="list-header">Repo list</h3>
+  </div>
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let repo of repos | async">
+        <a [routerLink]=" ['RepoDetail', {org: repo.owner.login, name: repo.name}] ">
+          {{ repo.name }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
